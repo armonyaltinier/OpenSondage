@@ -188,12 +188,14 @@ function bandeau_pied_mobile()
        '<div class="bandeaupiedmobile">'. _("Universit&eacute; de Strasbourg. Creation: Guilhem BORGHESI. 2008-2009") .'</div>'."\n";*/
        echo '<div class="separateur">&nbsp;</div>';
   echo '<div class="sousbandeau">' .
-       '<a class="button small gray" href="/">'. _("Home") .'</a>' .
-       '<a class="button small gray" href="' . getUrlSondage('aqg259dth55iuhwm').'">'. _("Example") .'</a>' .
-       '<a class="button small gray" href="http://contact.framasoft.org" target="_new">'. _("Contact") .'</a>' .
+		'<ul>' .
+       '<li><a class="button small gray" href="/">'. _("Home") .'</a></li>' .
+       '<li><a class="button small gray" href="' . getUrlSondage('aqg259dth55iuhwm').'">'. _("Example") .'</a></li>' .
+       '<li><a class="button small gray" href="http://contact.framasoft.org" target="_new">'. _("Contact") .'</a></li>' .
        //'<a href="/sources/sources.php">'. _("Sources") .'</a>' . //not implemented
-       '<a class="button small gray" href="/apropos.php">'. _("About") .'</a>' .
-       //'<a class="button small gray" href="/admin/index.php">'. _("Admin") .'</a>' .
+       '<li><a class="button small gray" href="/apropos.php">'. _("About") .'</a></li>' .
+       //'<a class="button small gray" href="/admin/index.php">'. _("Admin") .'</a></li>' .
+       '</ul>' .
        '<span class="sousbandeau sousbandeaulangue">' .
        liste_lang() . '</span>'.
        '</div>' . "\n";
