@@ -73,7 +73,7 @@ function gAnalytics() {
 function logo ()
 {
 /*  if(defined('LOGOBANDEAU')) {
-    echo '<div class="logo"><img src="/' . LOGOBANDEAU . '" height="74" alt="logo"></div>'."\n";
+    echo '<div class="logo"><img src="/' . LOGOBANDEAU . '" height="74" alt=""></div>'."\n";
   }*/
 }
 
@@ -83,11 +83,11 @@ function bandeau_tete()
 {
   if ( IMAGE_TITRE ) {
 
-    echo '<div class="bandeau"><a href="/" title="Accueil '.NOMAPPLICATION.'"><img src="/' . IMAGE_TITRE. '" title="Accueil '.NOMAPPLICATION.'" alt="'.NOMAPPLICATION.'"></a></div>'."\n";
+    echo '<div role="banner" class="bandeau"><h1><a href="/" title="Accueil '.NOMAPPLICATION.'"><img src="/' . IMAGE_TITRE. '" title="Accueil '.NOMAPPLICATION.'" alt="'.NOMAPPLICATION.'"></a></h1></div>'."\n";
 
   } else {
 
-    echo '<div class="bandeau"><a href="/" title="Accueil '.NOMAPPLICATION.'">'.NOMAPPLICATION.'</a></div>'."\n";
+    echo '<div role="banner" class="bandeau"><h1><a href="/" title="Accueil '.NOMAPPLICATION.'">'.NOMAPPLICATION.'</a></h1></div>'."\n";
 
   } ;
 
@@ -97,7 +97,7 @@ function bandeau_tete()
 // bandeaux de titre
 function bandeau_titre($titre)
 {
-  echo '<div class="bandeautitre">'. $titre .'</div>'."\n";
+  echo '<p class="bandeautitre">'. $titre .'</p>'."\n";
 }
 
 
@@ -136,10 +136,10 @@ function sous_bandeau_admin()
        '<a class="button small gray" href="/">'. _("Home") .'</a>';
 
   if(is_readable('logs_studs.txt')) {
-    echo '<a class="button small gray" href="/admin/logs_studs.txt">'. _("Logs") .'</a>';
+    echo '<a role="button" class="button small gray" href="/admin/logs_studs.txt">'. _("Logs") .'</a>';
   }
 
-  echo '<a class="button small gray" href="/../scripts/nettoyage_sondage.php">'. _("Cleaning") .'</a>' .
+  echo '<a role="button" class="button small gray" href="/../scripts/nettoyage_sondage.php">'. _("Cleaning") .'</a>' .
        '<span class="sousbandeau sousbandeaulangue">' .
        liste_lang() . '</span>'.
        '</div>'."\n";
@@ -166,14 +166,15 @@ function sur_bandeau_pied()
 function bandeau_pied()
 {
   //echo '<div class="bandeaupied">'. _("Universit&eacute; de Strasbourg. Creation: Guilhem BORGHESI. 2008-2009") .'</div>'."\n";
-  echo '<div class="separateur">&nbsp;</div>';
   echo '<div class="sousbandeau">' .
-       '<a class="button small gray" href="/">'. _("Home") .'</a>' .
-       '<a class="button small gray" href="' . getUrlSondage('aqg259dth55iuhwm').'">'. _("Example") .'</a>' .
-       '<a class="button small gray" href="http://contact.framasoft.org" target="_new">'. _("Contact") .'</a>' .
+		'<ul>' .
+       '<li><a class="button small gray" href="/">'. _("Home") .'</a></li>' .
+       '<li><a class="button small gray" href="' . getUrlSondage('aqg259dth55iuhwm').'">'. _("Example") .'</a></li>' .
+       '<li><a class="button small gray" href="http://contact.framasoft.org" target="_new">'. _("Contact") .'</a></li>' .
        //'<a href="/sources/sources.php">'. _("Sources") .'</a>' . //not implemented
-       '<a class="button small gray" href="/apropos.php">'. _("About") .'</a>' .
-       //'<a class="button small gray" href="/admin/index.php">'. _("Admin") .'</a>' .
+       '<li><a class="button small gray" href="/apropos.php">'. _("About") .'</a></li>' .
+       //'<a class="button small gray" href="/admin/index.php">'. _("Admin") .'</a></li>' .
+       '</ul>' .
        '<span class="sousbandeau sousbandeaulangue">' .
        liste_lang() . '</span>'.
        '</div>' . "\n";
