@@ -169,7 +169,7 @@ if(!check_table_sondage()) {
 //debut du formulaire
 echo '<form name="formulaire" id="formulaire" action="infos_sondage.php" method="POST" onkeypress="javascript:process_keypress(event)">'."\n";
 
-echo '<div class=corps>'."\n";
+echo '<div class=corps style=\"margin-bottom:5em;\">'."\n";
 echo '<p>'. _("You are in the poll creation section. <br> Required fields cannot be left blank") .'</p>'."\n";
 
 //Affichage des différents champs textes a remplir
@@ -238,13 +238,13 @@ if ($_SESSION["studsplus"]=="+") {
   $cocheplus="checked";
 }
 
-echo '<p><input type=checkbox name=studsplus '.$cocheplus.' id="studsplus"><label for="studsplus">'. _(" Voters can modify their vote themselves.") .'</label></p>'."\n";
+echo '<p><input type=checkbox name=studsplus '.$cocheplus.' id="studsplus"><label for="studsplus"><strong>'. _(" Voters can modify their vote themselves.") .'</strong></label></p>'."\n";
 
 if ($_SESSION["mailsonde"]) {
   $cochemail="checked";
 }
 
-echo '<p><input type=checkbox name=mailsonde '.$cochemail.' id="mailsonde"><label for="mailsonde">'. _(" To receive an email for each new vote.") .'</label></p>'."\n";
+echo '<p><input type=checkbox name=mailsonde '.$cochemail.' id="mailsonde"><label for="mailsonde"><strong>'. _(" To receive an email for each new vote.") .'</strong></label></p>'."\n";
 
 //affichage des boutons pour choisir sondage date ou autre
 if ($_GET['choix_sondage'] == 'date') {

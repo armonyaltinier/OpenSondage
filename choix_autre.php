@@ -61,7 +61,7 @@ if (issetAndNoEmpty('titre', $_SESSION) === false || issetAndNoEmpty('nom', $_SE
   bandeau_tete();
   bandeau_titre(_("Error!"));
   echo '<div class="corpscentre">'."\n";
-  print "<h1>" . _("You haven't filled the first section of the poll creation.") . " !</h1>"."\n";
+  print "<h2>" . _("You haven't filled the first section of the poll creation.") . " !</h2>"."\n";
   print "" . _("Back to the homepage of ") . " <a href=\"index.php\"> ".NOMAPPLICATION."</a>."."\n";
   echo '</div>'."\n";
   //bandeau de pied
