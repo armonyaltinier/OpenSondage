@@ -206,16 +206,16 @@ if (!isset($_POST["fin_sondage_autre_x"])) {
     //demande de la date de fin du sondage
     echo '<div class=presentationdatefin>'."\n";
     echo '<p>'. _("Your poll will be automatically removed after 6 months.<br> You can fix another removal date for it.") .'</p>'."\n";
-    echo '<label for="champdatefin">'. _("Removal date (optional)") .'</label> : <input type="text" class="champdatefin" id="champdatefin" aria-describedby="dateformat" name="champdatefin" value="'.$date_selected.'" size="10" maxlength="10"> <span id="dateformat">'. _("(DD/MM/YYYY)") .'</span>'"\n";
+    echo '<label for="champdatefin">'. _("Removal date (optional)") .'</label> : <input type="text" class="champdatefin" id="champdatefin" aria-describedby="dateformat" name="champdatefin" value="'.$date_selected.'" size="10" maxlength="10"> <span id="dateformat">'. _("(DD/MM/YYYY)") .'</span>'."\n";
     echo '</div>'."\n";
     echo '<div class=presentationdatefin>'."\n";
-    echo '<p class=\"error\">'. _("Once you have confirmed the creation of your poll, you will be automatically redirected on the page of your poll. </p>Then, you will receive quickly an email contening the link to your poll for sending it to the voters.")."\n";
+    echo '<p class="error">'. _("Once you have confirmed the creation of your poll, you will be automatically redirected on the page of your poll. <br><br>Then, you will receive quickly an email contening the link to your poll for sending it to the voters.").'</p>'."\n";
     echo '</div>'."\n";
     //echo '<table>'."\n";
     //echo '<tr><td>'. _("Create the poll") .'</td><td><input type="image" name="confirmecreation" value="Valider la cr&eacute;ation"i src="images/add.png"></td></tr>'."\n";
     //echo '</table>'."\n";
     
-    echo '<button name="confirmecreation" value="confirmecreation" type="submit" class="button green poursuivre"><strong>'. _('Make a poll') . '</strong> </button>';
+    echo '<button name="confirmecreation" value="confirmecreation" type="submit" class="button green poursuivre margin-top"><strong>'. _('Make a poll') . '</strong> </button>';
     echo '<div style="clear:both"></div>';
     
   }

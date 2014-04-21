@@ -681,5 +681,8 @@ li.error {
 
 .error {
 	color:red;
-	font-weight:bold;
+}
+
+.margin-top {
+	margin-top:1em;
 }
