@@ -206,7 +206,7 @@ if (!isset($_POST["fin_sondage_autre_x"])) {
     //demande de la date de fin du sondage
     echo '<div class=presentationdatefin>'."\n";
     echo '<p>'. _("Your poll will be automatically removed after 6 months.<br> You can fix another removal date for it.") .'</p>'."\n";
-    echo _("Removal date (optional)") .' : <input type="text" class="champdatefin" name="champdatefin" value="'.$date_selected.'" size="10" maxlength="10"> '. _("(DD/MM/YYYY)") ."\n";
+    echo '<label for="champdatefin">'. _("Removal date (optional)") .'</label> : <input type="text" class="champdatefin" id="champdatefin" aria-describedby="dateformat" name="champdatefin" value="'.$date_selected.'" size="10" maxlength="10"> <span id="dateformat">'. _("(DD/MM/YYYY)") .'</span>'"\n";
     echo '</div>'."\n";
     echo '<div class=presentationdatefin>'."\n";
     echo '<p class=\"error\">'. _("Once you have confirmed the creation of your poll, you will be automatically redirected on the page of your poll. </p>Then, you will receive quickly an email contening the link to your poll for sending it to the voters.")."\n";
