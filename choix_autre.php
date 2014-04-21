@@ -167,7 +167,7 @@ if (issetAndNoEmpty('titre', $_SESSION) === false || issetAndNoEmpty('nom', $_SE
   
   //ajout de cases supplementaires
   echo '<table><tr>'."\n";
-  echo '<td>'. _("5 choices more") .'</td><td><input type="image" alt="Ajouter 5 choix supplémentaires" name="ajoutcases" value="Retour" src="images/add-16.png"></td>'."\n";
+  echo '<td>'. _("5 choices more") .'</td><td><input type="image" alt="'. _("5 choices more").'" name="ajoutcases" value="Retour" src="images/add-16.png"></td>'."\n";
   echo '</tr></table>'."\n";
   
   //echo '<table><tr>'."\n";
@@ -205,7 +205,7 @@ if (!isset($_POST["fin_sondage_autre_x"])) {
   if ((isset($_POST["fin_sondage_autre"]) || isset($_POST["fin_sondage_autre_x"])) && !$erreur && !$erreur_injection) {
     //demande de la date de fin du sondage
     echo '<div class=presentationdatefin>'."\n";
-    echo '<p>'. _("Your poll will be automatically removed after 6 months.<p><p> You can fix another removal date for it.") .'</p>'."\n";
+    echo '<p>'. _("Your poll will be automatically removed after 6 months.<br> You can fix another removal date for it.") .'</p>'."\n";
     echo _("Removal date (optional)") .' : <input type="text" class="champdatefin" name="champdatefin" value="'.$date_selected.'" size="10" maxlength="10"> '. _("(DD/MM/YYYY)") ."\n";
     echo '</div>'."\n";
     echo '<div class=presentationdatefin>'."\n";
