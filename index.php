@@ -75,13 +75,13 @@ echo '<div class=corps>'."\n";
 
 echo '<div class="index_date">';
 echo '<p><a href="./infos_sondage.php?choix_sondage=date" role="button"><img class="opacity" src="images/date.png" alt="" />';
-echo '<span class="button orange bigrounded"/><strong><img src="images/calendar-32.png" alt="" />'
+echo '<span class="button orange bigrounded"><strong><img src="images/calendar-32.png" alt="" />'
     . _('Schedule an event') . '</strong></span></a></p>';
 echo '</div>';
 
 echo '<div class="index_sondage">';
 echo '<p><a href="./infos_sondage.php?choix_sondage=autre" role="button"><img alt="" class="opacity" src="images/sondage2.png" />';
-echo '<span class="button blue bigrounded"><strong><img src="images/chart-32.png" alt="" />'. _('Make a poll') . '</strong></a></span>';
+echo '<span class="button blue bigrounded"><strong><img src="images/chart-32.png" alt="" />'. _('Make a poll') . '</strong></span></a></p>';
 echo '</div>';
 
 
