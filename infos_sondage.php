@@ -169,7 +169,7 @@ if(!check_table_sondage()) {
 //debut du formulaire
 echo '<form name="formulaire" id="formulaire" action="infos_sondage.php" method="POST" onkeypress="javascript:process_keypress(event)">'."\n";
 
-echo '<div class=corps style=\"margin-bottom:5em;\">'."\n";
+echo '<div class="corps" style="margin-bottom:5em;">'."\n";
 echo '<p>'. _("You are in the poll creation section. <br> Required fields cannot be left blank") .'</p>'."\n";
 
 //Affichage des différents champs textes a remplir
@@ -190,7 +190,7 @@ if ($erreur_injection_commentaires) {
 }
 
 echo '</tr>'."\n";
-echo '<tr><td><label for="yourname">'. _("Your name*: ") .'</td><td>';
+echo '<tr><td><label for="yourname">'. _("Your name*: ") .'</label><td>';
 
 if (USE_REMOTE_USER && isset($_SERVER['REMOTE_USER'])) {
   echo '<input type="hidden" name="nom" size="40" maxlength="40" value="'.$_SESSION["nom"].'">'.stripslashes($_SESSION["nom"]).'</td>'."\n";
@@ -205,7 +205,7 @@ if (!$_SESSION["nom"] && issetAndNoEmpty("poursuivre")) {
 }
 
 echo '</tr>'."\n";
-echo '<tr><td><label for="email">'. _("Your e-mail address *: ") .'</td><td>';
+echo '<tr><td><label for="email">'. _("Your e-mail address *: ") .'</label><td>';
 
 if (USE_REMOTE_USER && isset($_SERVER['REMOTE_USER'])) {
   echo '<input type="hidden" name="adresse" size="40" maxlength="64" value="'.$_SESSION["adresse"].'">'.$_SESSION["adresse"].'</td>'."\n";

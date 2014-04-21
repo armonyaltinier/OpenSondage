@@ -51,9 +51,9 @@ if (issetAndNoEmpty('titre', $_SESSION) === false || issetAndNoEmpty('nom', $_SE
   echo '<!DOCTYPE html>'."\n";
   echo '<html lang="fr">'."\n";
   echo '<head>'."\n";
-  echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'."\n";
+  echo '<meta charset="utf-8">'."\n";
   echo '<title>'Création de sondage (1 sur 2).NOMAPPLICATION.'</title>'."\n";
-  echo '<link rel="stylesheet" type="text/css" href="style.css">'."\n";
+  echo '<link rel="stylesheet" href="./style.css">'."\n";
   echo '</head>'."\n";
   echo '<body>'."\n";
   framanav();

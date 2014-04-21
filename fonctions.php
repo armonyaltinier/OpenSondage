@@ -105,10 +105,10 @@ function is_user()
 
 function print_header($js = false, $nom_sondage = '')
 {
-  echo '<!DOCTYPE html">
+  echo '<!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
+    <meta charset="utf-8">';
   if (empty($nom_sondage) === false) {
     echo '
     <title>'.stripslashes($nom_sondage).' - '.NOMAPPLICATION.'</title>';
@@ -117,8 +117,8 @@ function print_header($js = false, $nom_sondage = '')
     <title>'.NOMAPPLICATION.'</title>';
   }
   echo '
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link rel="stylesheet" type="text/css" href="/print.css" media="print">';
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/print.css" media="print">';
 
   echo '</head>';
 }
