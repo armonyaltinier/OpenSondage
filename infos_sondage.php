@@ -173,7 +173,7 @@ echo '<div class="corps" style="margin-bottom:5em;">'."\n";
 echo '<p>'. _("You are in the poll creation section. <br> Required fields cannot be left blank") .'</p>'."\n";
 
 //Affichage des différents champs textes a remplir
-echo '<table>'."\n";
+echo '<table role="presentation">'."\n";
 
 echo '<tr><td><label for="poll_title">'. _("Poll title *: ") .'</label></td><td><input id="poll_title" type="text" name="titre" size="40" maxlength="80" value="'.stripslashes($_SESSION["titre"]).'"></td>'."\n";
 if (!$_SESSION["titre"] && issetAndNoEmpty("poursuivre") ) {

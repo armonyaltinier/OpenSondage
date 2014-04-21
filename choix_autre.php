@@ -52,7 +52,7 @@ if (issetAndNoEmpty('titre', $_SESSION) === false || issetAndNoEmpty('nom', $_SE
   echo '<html lang="fr">'."\n";
   echo '<head>'."\n";
   echo '<meta charset="utf-8">'."\n";
-  echo '<title>'Création de sondage (1 sur 2).NOMAPPLICATION.'</title>'."\n";
+  echo '<title>'.NOMAPPLICATION.'</title>'."\n";
   echo '<link rel="stylesheet" href="./style.css">'."\n";
   echo '</head>'."\n";
   echo '<body>'."\n";
@@ -146,7 +146,7 @@ if (issetAndNoEmpty('titre', $_SESSION) === false || issetAndNoEmpty('nom', $_SE
   sous_bandeau_choix();
   
   echo '<div class="corps">'."\n";
-  echo '<p>'. _("Your poll aim is to make a choice between different subjects.</p><p>Enter the subjects to vote for:") .'</p>'."\n";
+  echo '<p>'. _("Your poll aim is to make a choice between different subjects.<br>Enter the subjects to vote for:") .'</p>'."\n";
   echo '<table>'."\n";
   
   //affichage des cases texte de formulaire
@@ -155,7 +155,7 @@ if (issetAndNoEmpty('titre', $_SESSION) === false || issetAndNoEmpty('nom', $_SE
     if (isset($_SESSION["choix$i"]) === false) {
       $_SESSION["choix$i"] = '';
     }
-    echo '<tr><td>'. _("Choice") .' '.$j.' : </td><td><input type="text" name="choix[]" size="40" maxlength="40" value="'.str_replace("\\","",$_SESSION["choix$i"]).'" id="choix'.$i.'"></td></tr>'."\n";
+    echo '<tr><td><label for="choix'.$i.'">'. _("Choice") .' '.$j.'</label> : </td><td><input type="text" name="choix[]" size="40" maxlength="40" value="'.str_replace("\\","",$_SESSION["choix$i"]).'" id="choix'.$i.'"></td></tr>'."\n";
   }
   
   echo '</table>'."\n";
@@ -167,7 +167,7 @@ if (issetAndNoEmpty('titre', $_SESSION) === false || issetAndNoEmpty('nom', $_SE
   
   //ajout de cases supplementaires
   echo '<table><tr>'."\n";
-  echo '<td>'. _("5 choices more") .'</td><td><input type="image" name="ajoutcases" value="Retour" src="images/add-16.png"></td>'."\n";
+  echo '<td>'. _("5 choices more") .'</td><td><input type="image" alt="Ajouter 5 choix supplémentaires" name="ajoutcases" value="Retour" src="images/add-16.png"></td>'."\n";
   echo '</tr></table>'."\n";
   
   //echo '<table><tr>'."\n";
