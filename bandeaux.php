@@ -191,7 +191,7 @@ function bandeau_pied_mobile()
 		'<ul>' .
        '<li><a class="button small gray" href="/">'. _("Home") .'</a></li>' .
        '<li><a class="button small gray" href="' . getUrlSondage('aqg259dth55iuhwm').'">'. _("Example") .'</a></li>' .
-       '<li><a class="button small gray" href="http://contact.framasoft.org" target="_new">'. _("Contact") .'</a></li>' .
+       '<li><a class="button small gray" href="http://contact.framasoft.org">'. _("Contact") .'</a></li>' .
        //'<a href="/sources/sources.php">'. _("Sources") .'</a>' . //not implemented
        '<li><a class="button small gray" href="/apropos.php">'. _("About") .'</a></li>' .
        //'<a class="button small gray" href="/admin/index.php">'. _("Admin") .'</a></li>' .

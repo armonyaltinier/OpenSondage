@@ -686,3 +686,7 @@ li.error {
 .margin-top {
 	margin-top:1em;
 }
+
+.txt-right {
+text-align:right;
+}
